@@ -24,6 +24,10 @@
             android:name=".Check_In_Done_Activity"
             android:label="@string/title_activity_check__in__done_" >
         </activity>
+        <activity
+            android:name=".FormActivity"
+            android:label="@string/title_activity_form" >
+        </activity>
     </application>
 
 </manifest>
