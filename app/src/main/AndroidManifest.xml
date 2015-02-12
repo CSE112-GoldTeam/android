@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Check_In_Activity"
+            android:label="@string/title_activity_check__in_" >
+        </activity>
+        <activity
+            android:name=".Check_In_Done_Activity"
+            android:label="@string/title_activity_check__in__done_" >
+        </activity>
     </application>
 
 </manifest>
