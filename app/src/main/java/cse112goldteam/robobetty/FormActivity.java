@@ -1,5 +1,6 @@
 package cse112goldteam.robobetty;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Pair;
@@ -52,9 +53,12 @@ public class FormActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_done) {
+            Intent gotoSignActivity = new Intent(this, SignatureActivity.class);
+            startActivity(gotoSignActivity);
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

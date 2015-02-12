@@ -8,39 +8,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
-
+    tools:context="cse112goldteam.robobetty.no_appt_page">
 
     <TextView
-        android:id="@+id/textViewWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Welcome to &lt;Company&gt;!"
+        android:text="You&apos;re all done!"
+        android:layout_marginBottom="20dip"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please wait, someone will be with you shortly."
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
-        android:id="@+id/imageViewLogo"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dip"
         android:src="@drawable/logo1" />
 
-    <Button
-        android:id="@+id/buttonCheckIn"
-        android:layout_width="200dip"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="30dip"
-        android:text="Check In" />
-
-    <Button
-        android:id="@+id/buttonNoAppointment"
-        android:layout_width="200dip"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="No Appointment" />
-
-
+        android:text="Thank you!"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>

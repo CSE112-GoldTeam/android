@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,13 @@
         </activity>
         <activity
             android:name=".FormActivity"
-            android:label="@string/title_activity_form"></activity>
+            android:label="@string/title_activity_form" />
+        <activity android:name=".EnterCodeActivity" />
+        <activity android:name=".NoAppointment" />
+        <activity android:name=".FindAppointmentActivity" />
+        <activity android:name=".SignatureActivity" />
+        <activity android:name=".DoneActivity" />
+        <activity android:name=".NoCodeActivity" />
     </application>
 
 </manifest>

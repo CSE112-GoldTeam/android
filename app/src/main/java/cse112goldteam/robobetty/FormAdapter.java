@@ -20,7 +20,7 @@ public class FormAdapter extends ArrayAdapter<Pair<String, Boolean>> {
     private LayoutInflater inflater;
 
     public FormAdapter(Activity activity, List<Pair<String, Boolean>> data){
-        super(activity, R.layout.form_item, data);
+        super(activity, R.layout.activity_form_item, data);
         this.data = data;
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -53,7 +53,7 @@ public class FormAdapter extends ArrayAdapter<Pair<String, Boolean>> {
 
         if(convertView == null){
             //Inflate the view
-            convertView = inflater.inflate(R.layout.form_item, parent, false);
+            convertView = inflater.inflate(R.layout.activity_form_item, parent, false);
             holder = new Holder();
 
             //Get instances of the the UI components of the view and place them in the holder.
