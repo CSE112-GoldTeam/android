@@ -2,11 +2,7 @@
 <resources>
 
     <string name="app_name">RoboBetty</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_check__in_">Check_In_Activity</string>
-    <string name="title_activity_check__in__done_">Check_In_Done_Activity</string>
-    <string name="title_activity_form">Forms to Complete</string>
-    <string name="title_activity_done">DoneActivity</string>
+
 
 </resources>
