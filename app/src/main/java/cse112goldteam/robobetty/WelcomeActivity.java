@@ -11,7 +11,7 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_welcome);
 
         // Set listeners for the buttons.
         findViewById(R.id.buttonCheckIn).setOnClickListener(this);
@@ -29,7 +29,7 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
         switch (v.getId()){
 
             case R.id.buttonCheckIn:
-                Intent gotoEnterCodeActivity = new Intent(this, EnterCodeActivity.class);
+                Intent gotoEnterCodeActivity = new Intent(this, FindAppointmentActivity.class);
                 startActivity(gotoEnterCodeActivity);
                 overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
