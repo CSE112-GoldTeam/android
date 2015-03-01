@@ -16,7 +16,7 @@ public class BusinessLoginActivity extends ActionBarActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_login);
 
-        //TODO: add a check here to check if we already logged in. If so, then go to MainActivity
+        //TODO: add a check here to check if we already logged in. If so, then go to WelcomeActivity
 
         findViewById(R.id.buttonLogin).setOnClickListener(this);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
