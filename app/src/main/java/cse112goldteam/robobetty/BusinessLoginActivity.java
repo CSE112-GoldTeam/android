@@ -1,5 +1,6 @@
 package cse112goldteam.robobetty;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +30,8 @@ public class BusinessLoginActivity extends ActionBarActivity implements View.OnC
         if(v.getId() == R.id.buttonLogin){
             String email = editTextEmail.getText().toString();
             String password = editTextPassword.getText().toString();
+            Intent gotoFromActivity = new Intent(this, FindAppointmentActivity.class);
+            startActivity(gotoFromActivity);
         }
     }
 }

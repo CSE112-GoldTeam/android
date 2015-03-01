@@ -29,8 +29,8 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
         switch (v.getId()){
 
             case R.id.buttonCheckIn:
-//                Intent gotoEnterCodeActivity = new Intent(this, EnterCodeActivity.class);
-//                startActivity(gotoEnterCodeActivity);
+                Intent gotoEnterCodeActivity = new Intent(this, FindAppointmentActivity.class);
+                startActivity(gotoEnterCodeActivity);
                 break;
 
             case R.id.buttonNoAppointment:

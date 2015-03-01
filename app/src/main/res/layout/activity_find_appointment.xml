@@ -1,88 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/find_page"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="#fff"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/status_bar3"/>
+    android:background="@drawable/bg"
+    tools:context="cse112goldteam.robobetty.BusinessLoginActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/box"
+        android:layout_width="300dip"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:gravity="center_horizontal">
-
-        <ImageView
-            android:id="@+id/imageViewPhoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo0" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#66000000"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="300dip"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="Welcome to Gold team"
+            android:textColor="#fff"
+            android:textSize="40dp" />
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:text="Hi, John"
-            android:textColor="#000"
-            android:textSize="30dip" />
+            android:src="@drawable/gold_team_logo" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="135dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/white_bg"
+                android:hint=" First Name" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="135dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/white_bg"
+                android:hint=" Last Name" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextDOB"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint=" mm/dd/yyyy"
+            android:background="@drawable/white_bg"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Next" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="Appointment Time: 10:00 am"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
-        android:text="John Doe"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_marginLeft="10dp"
+        android:text="RoboBetty"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="01/02/03"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+</RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="(123) 456 - 7890"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Not you?"
-            android:layout_marginRight="50dp"
-            android:id="@+id/buttonNotYou" />
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            android:id="@+id/buttonNextFindAppointment" />
-    </LinearLayout>
-
-</LinearLayout>
