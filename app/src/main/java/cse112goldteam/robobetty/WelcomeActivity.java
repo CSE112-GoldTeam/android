@@ -31,11 +31,13 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
             case R.id.buttonCheckIn:
                 Intent gotoEnterCodeActivity = new Intent(this, EnterCodeActivity.class);
                 startActivity(gotoEnterCodeActivity);
+                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
 
             case R.id.buttonNoAppointment:
                 Intent gotoDoneActivity = new Intent(this, NoAppointment.class);
                 startActivity(gotoDoneActivity);
+                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
         }
     }

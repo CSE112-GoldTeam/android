@@ -14,4 +14,11 @@ public class DoneActivity extends ActionBarActivity {
         setContentView(R.layout.activity_done);
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        this.finish();
+        overridePendingTransition  (R.anim.left_slide_in, R.anim.left_slide_out);
+    }
+
 }

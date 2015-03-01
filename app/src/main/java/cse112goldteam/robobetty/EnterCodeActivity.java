@@ -29,6 +29,7 @@ public class EnterCodeActivity extends ActionBarActivity implements View.OnClick
             case R.id.buttonNextEnterCode:
                 Intent gotoFindAppointmentActivity = new Intent(this, FindAppointmentActivity.class);
                 startActivity(gotoFindAppointmentActivity);
+                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
 
             case R.id.buttonNoProblem:
@@ -36,5 +37,12 @@ public class EnterCodeActivity extends ActionBarActivity implements View.OnClick
                 startActivity(gotoNoCode);
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        this.finish();
+        overridePendingTransition  (R.anim.left_slide_in, R.anim.left_slide_out);
     }
 }

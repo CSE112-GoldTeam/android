@@ -98,9 +98,8 @@
             android:src="@drawable/blank" />
 
         <Button
+            style="@style/button_custom"
             android:id="@+id/buttonDoneSignActivity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_gravity="center|right"
             android:text="Done!" />
 

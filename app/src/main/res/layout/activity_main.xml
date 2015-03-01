@@ -27,17 +27,20 @@
         android:src="@drawable/logo1" />
 
     <Button
+        style="@style/button_custom"
         android:id="@+id/buttonCheckIn"
         android:layout_width="200dip"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="30dip"
         android:text="Check In" />
 
     <Button
+        style="@style/button_custom"
+        android:background="@drawable/redbutton"
         android:id="@+id/buttonNoAppointment"
         android:layout_width="200dip"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:text="No Appointment" />
 
