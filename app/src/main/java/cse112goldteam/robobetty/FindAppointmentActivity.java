@@ -33,8 +33,8 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonNext:
-                Intent gotoFromActivity = new Intent(this, FoundActivty.class);
-                startActivity(gotoFromActivity);
+                Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
+                startActivity(gotoFoundActivity);
                 overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
             case R.id.editTextDOB:
@@ -61,7 +61,7 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
         myCalendar.set(Calendar.MONTH, monthOfYear);
         myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-        String myFormat = "MM/dd/yy"; //In which you need put here
+        String myFormat = "mm/dd/yy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         editTextDOB.setText(sdf.format(myCalendar.getTime()));
     }
