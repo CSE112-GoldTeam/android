@@ -64,8 +64,8 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:hint=" mm/dd/yyyy"
-            android:background="@drawable/white_bg"/>
+            android:background="@drawable/white_bg"
+            android:hint=" mm/dd/yyyy" />
 
 
         <LinearLayout
@@ -74,17 +74,17 @@
             android:orientation="horizontal">
 
             <Button
-                style="@style/button_custom"
-                android:background="@drawable/redbutton"
                 android:id="@+id/buttonCancel"
+                style="@style/button_custom"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
+                android:background="@drawable/redbutton"
                 android:text="Cancel" />
 
             <Button
-                style="@style/button_custom"
                 android:id="@+id/buttonNext"
+                style="@style/button_custom"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
                 android:text="Next" />
