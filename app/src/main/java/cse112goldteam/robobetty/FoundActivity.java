@@ -24,13 +24,22 @@ public class FoundActivity extends ActionBarActivity implements View.OnClickList
             case R.id.buttonNextFindAppointment:
                 Intent gotoCustomFormActivity = new Intent(this, CustomFormActivity.class);
                 startActivity(gotoCustomFormActivity);
+                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
 
             case R.id.buttonNotYou:
-                Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
-                startActivity(gotoWelcomeActivity);
+                this.onBackPressed();
                 break;
 
         }
     }
+
+
+    public void onBackPressed() {
+        this.finish();
+        Intent gotoFindAppointmentActivity = new Intent(this, FindAppointmentActivity.class);
+        startActivity(gotoFindAppointmentActivity);
+        overridePendingTransition(R.anim.left_slide_in, R.anim.left_slide_out);
+    }
+
 }

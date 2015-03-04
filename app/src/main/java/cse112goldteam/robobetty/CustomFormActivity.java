@@ -19,30 +19,10 @@ public class CustomFormActivity extends ActionBarActivity implements View.OnClic
         setContentView(R.layout.activity_custom_form);
         findViewById(R.id.buttonNextCustomForm).setOnClickListener(this);
         findViewById(R.id.buttonCancelCustomForm).setOnClickListener(this);
+        editTextAllergies = (EditText) findViewById(R.id.editTextAllergies);
+        editTextFavoriteColor = (EditText) findViewById(R.id.editTextFavoriteColor);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_custom_form, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
 
     @Override
@@ -55,11 +35,16 @@ public class CustomFormActivity extends ActionBarActivity implements View.OnClic
             overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
         }
         else if(v.getId() == R.id.buttonCancelCustomForm) {
-            Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
-            startActivity(gotoFoundActivity);
-            overridePendingTransition  (R.anim.left_slide_in, R.anim.left_slide_out);
+            this.onBackPressed();
         }
 
+    }
+
+    public void onBackPressed() {
+        this.finish();
+        Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
+        startActivity(gotoFoundActivity);
+        overridePendingTransition  (R.anim.left_slide_in, R.anim.left_slide_out);
     }
 
 }

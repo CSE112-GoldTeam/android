@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -48,10 +49,9 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
 
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         this.finish();
-        overridePendingTransition  (R.anim.left_slide_in, R.anim.left_slide_out);
+        overridePendingTransition(R.anim.left_slide_in, R.anim.left_slide_out);
     }
 
 
