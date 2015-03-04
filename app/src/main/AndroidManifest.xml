@@ -19,7 +19,13 @@
         <activity android:name=".FindAppointmentActivity" />
         <activity android:name=".SignatureActivity" />
         <activity android:name=".DoneActivity" />
-        <activity android:name=".FoundActivty">
+        <activity
+            android:name=".CustomFormActivity"
+            android:label="@string/title_activity_custom_form" >
+        </activity>
+        <activity
+            android:name=".FoundActivity"
+            android:label="@string/title_activity_found" >
         </activity>
     </application>
 

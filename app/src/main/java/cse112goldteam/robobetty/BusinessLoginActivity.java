@@ -3,8 +3,6 @@ package cse112goldteam.robobetty;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
@@ -32,10 +30,9 @@ public class BusinessLoginActivity extends ActionBarActivity implements View.OnC
             String email = editTextEmail.getText().toString();
             String password = editTextPassword.getText().toString();
             String deviceName = editTextDeviceName.getText().toString();
-
-            Intent gotoFromActivity = new Intent(this, FindAppointmentActivity.class);
-            startActivity(gotoFromActivity);
-            overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
+            Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
+            startActivity(gotoWelcomeActivity);
+            overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
         }
     }
 }
