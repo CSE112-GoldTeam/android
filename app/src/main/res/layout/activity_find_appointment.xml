@@ -5,9 +5,31 @@
     android:background="@drawable/bg"
     tools:context="cse112goldteam.robobetty.BusinessLoginActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your checkin completion"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:layout_above="@+id/progressBar"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/box"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/progressbar_blue" />
+
     <LinearLayout
         android:id="@+id/box"
-        android:layout_width="300dip"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -21,7 +43,6 @@
             android:text="Welcome to Gold team"
             android:textColor="#fff"
             android:textSize="40dp" />
-
 
         <ImageView
             android:layout_width="150dp"
@@ -70,7 +91,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <Button
@@ -81,6 +103,11 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/redbutton"
                 android:text="Cancel" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#fff" />
 
             <Button
                 android:id="@+id/buttonNext"
@@ -101,7 +128,6 @@
         android:text="RoboBetty"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#fff" />
-
 
 </RelativeLayout>
 
