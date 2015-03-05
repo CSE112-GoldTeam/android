@@ -41,4 +41,5 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
                 break;
         }
     }
+
 }
