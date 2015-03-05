@@ -11,6 +11,7 @@ public class FoundActivity extends ActionBarActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found_activity);
+        this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonNext).setOnClickListener(this);
         findViewById(R.id.buttonNotYou).setOnClickListener(this);
     }

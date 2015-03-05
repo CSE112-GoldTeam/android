@@ -16,7 +16,7 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
+        this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         // Set listeners for the buttons.
         findViewById(R.id.buttonCheckIn).setOnClickListener(this);
         findViewById(R.id.buttonNoAppointment).setOnClickListener(this);

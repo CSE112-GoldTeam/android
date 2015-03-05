@@ -23,6 +23,7 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_appointment);
+        this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
 
         editTextDOB = (EditText) findViewById(R.id.editTextDOB);
         editTextDOB.setOnClickListener(this);
