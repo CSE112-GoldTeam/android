@@ -12,7 +12,7 @@ public class SignatureActivity extends ActionBarActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signature);
-
+        this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonDoneSignActivity).setOnClickListener(this);
     }
 

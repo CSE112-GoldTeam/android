@@ -12,6 +12,7 @@ public class DoneActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_done);
+        this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
     }
 
     @Override

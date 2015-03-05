@@ -1,6 +1,7 @@
 package cse112goldteam.robobetty;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
+        this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         // Set listeners for the buttons.
         findViewById(R.id.buttonCheckIn).setOnClickListener(this);
         findViewById(R.id.buttonNoAppointment).setOnClickListener(this);

@@ -17,6 +17,7 @@ public class CustomFormActivity extends ActionBarActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_form);
+        this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonNextCustomForm).setOnClickListener(this);
         findViewById(R.id.buttonCancelCustomForm).setOnClickListener(this);
         editTextAllergies = (EditText) findViewById(R.id.editTextAllergies);
