@@ -4,6 +4,27 @@
     android:layout_height="match_parent"
     tools:context="cse112goldteam.robobetty.CustomFormActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:text="Your checkin completion"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#fff" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="600dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/box"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="60"
+        android:progressDrawable="@drawable/progressbar_blue" />
+
     <LinearLayout
         android:id="@id/box"
         android:layout_width="400dip"
@@ -72,14 +93,36 @@
 
     </LinearLayout>
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageAnimation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:text="RoboBetty"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#fff" />
+        android:adjustViewBounds="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBar3"
+        android:layout_width="600dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="60"
+        android:progressDrawable="@drawable/progressbar_blue"
+        android:layout_above="@id/box"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your checkin completion"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#fff"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/progressBar3"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

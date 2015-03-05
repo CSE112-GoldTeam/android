@@ -35,4 +35,24 @@
 
     </LinearLayout>
 
+    <Button
+        style="@style/button_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Done"
+        android:id="@+id/buttonDone2"
+        android:layout_below="@id/box"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:adjustViewBounds="true" />
+
+
 </RelativeLayout>
