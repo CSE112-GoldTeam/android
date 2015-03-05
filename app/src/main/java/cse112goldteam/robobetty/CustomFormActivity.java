@@ -41,11 +41,4 @@ public class CustomFormActivity extends ActionBarActivity implements View.OnClic
 
     }
 
-    public void onBackPressed() {
-        this.finish();
-        Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
-        startActivity(gotoFoundActivity);
-        overridePendingTransition  (R.anim.left_slide_in, R.anim.left_slide_out);
-    }
-
 }

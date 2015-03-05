@@ -1,14 +1,17 @@
 package cse112goldteam.robobetty;
 
 import android.content.Intent;
-import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 
 public class WelcomeActivity extends ActionBarActivity implements View.OnClickListener {
 
+    private ImageView view;
+    private AnimationDrawable frameAnimation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +20,30 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
         // Set listeners for the buttons.
         findViewById(R.id.buttonCheckIn).setOnClickListener(this);
         findViewById(R.id.buttonNoAppointment).setOnClickListener(this);
+
+        // Typecasting the Image View
+        view = (ImageView) findViewById(R.id.imageAnimation);
+
+
+        // Setting animation_list.xml as the background of the image view
+
+        view.setBackgroundResource(R.drawable.animation_list);
+
+        // Typecasting the Animation Drawable
+        frameAnimation = (AnimationDrawable) view.getBackground();
+    }
+
+    // Called when Activity becomes visible or invisible to the user
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            // Starting the animation when in Focus
+            frameAnimation.start();
+        } else {
+            // Stoping the animation when not in Focus
+            frameAnimation.stop();
+        }
     }
 
 
@@ -42,5 +69,8 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {}
 
 }

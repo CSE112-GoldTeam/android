@@ -49,11 +49,6 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
     }
 
 
-    @Override
-    public void onBackPressed() {
-        this.finish();
-        overridePendingTransition(R.anim.left_slide_in, R.anim.left_slide_out);
-    }
 
 
     @Override
