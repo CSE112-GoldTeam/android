@@ -67,6 +67,12 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+        this.finish();
+        Intent gotoBusinessLoginActivity = new Intent(this, BusinessLoginActivity.class);
+        startActivity(gotoBusinessLoginActivity);
+        overridePendingTransition(R.anim.left_slide_in, R.anim.left_slide_out);
+
+    }
 
 }
