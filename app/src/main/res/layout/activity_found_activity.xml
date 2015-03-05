@@ -53,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Hi John"
+                android:textSize="40dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#fff" />
 
@@ -64,6 +65,7 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="Appointment Time: 10:00 am"
+            android:textSize="25dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#fff" />
 
@@ -90,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="(123) 456-7890"
+            android:text="johnDoe@example.com"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#fff" />
 

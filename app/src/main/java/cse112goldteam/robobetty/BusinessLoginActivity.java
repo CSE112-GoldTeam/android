@@ -31,7 +31,7 @@ public class BusinessLoginActivity extends ActionBarActivity implements View.OnC
             String password = editTextPassword.getText().toString();
             String deviceName = editTextDeviceName.getText().toString();
 
-            if(email.equals("goldTeam")) {
+            if(email.equals("goldTeam@test.com")) {
                 Business.setBackground(R.drawable.goldbg);
             }
             else {
