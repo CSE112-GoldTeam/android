@@ -22,7 +22,7 @@
             android:layout_marginBottom="15dp"
             android:text="Tell us a little bit more about yourself."
             android:textColor="#fff"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
 
 
         <EditText
