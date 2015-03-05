@@ -38,6 +38,7 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
                 Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
                 startActivity(gotoFoundActivity);
                 overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
+                this.finish();
                 break;
             case R.id.editTextDOB:
                 new DatePickerDialog(this, this, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
@@ -48,7 +49,11 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
         }
     }
 
-
+    @Override
+    public void onBackPressed() {
+        this.finish();
+        overridePendingTransition(R.anim.left_slide_in, R.anim.left_slide_out);
+    }
 
 
     @Override
