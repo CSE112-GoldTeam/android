@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:id="@id/box"
-        android:layout_width="500dip"
+        android:layout_width="400dip"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -15,14 +15,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="500dip"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:text="Tell us a little bit more about yourself."
+            android:text="Tell us a little bit more about yourself"
             android:textColor="#fff"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
 
 
         <EditText
@@ -36,7 +35,6 @@
             android:hint="Allergies" />
 
 
-
         <EditText
             android:id="@+id/editTextFavoriteColor"
             android:layout_width="match_parent"
@@ -44,35 +42,37 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:hint="Favorite Color"
-            android:background="@drawable/white_bg"/>
+            android:background="@drawable/white_bg"
+            android:hint="Favorite Color" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <Button
-                style="@style/button_custom"
-                android:background="@drawable/redbutton"
                 android:id="@+id/buttonCancelCustomForm"
-                android:layout_width="140dp"
-                android:layout_height="50dp"
+                style="@style/button_custom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/redbutton"
                 android:text="Cancel" />
 
             <Button
-                style="@style/button_custom"
                 android:id="@+id/buttonNextCustomForm"
-                android:layout_width="140dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
+                style="@style/button_custom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
                 android:text="Next" />
         </LinearLayout>
+
 
     </LinearLayout>
 

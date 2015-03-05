@@ -5,15 +5,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 
-
-
 public class FoundActivity extends ActionBarActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found_activity);
-        findViewById(R.id.buttonNextFindAppointment).setOnClickListener(this);
+        findViewById(R.id.buttonNext).setOnClickListener(this);
         findViewById(R.id.buttonNotYou).setOnClickListener(this);
     }
 
@@ -21,7 +19,7 @@ public class FoundActivity extends ActionBarActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.buttonNextFindAppointment:
+            case R.id.buttonNext:
                 Intent gotoCustomFormActivity = new Intent(this, CustomFormActivity.class);
                 startActivity(gotoCustomFormActivity);
                 overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
@@ -33,7 +31,6 @@ public class FoundActivity extends ActionBarActivity implements View.OnClickList
 
         }
     }
-
 
     public void onBackPressed() {
         this.finish();
