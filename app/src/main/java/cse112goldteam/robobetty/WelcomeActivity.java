@@ -70,4 +70,7 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
         }
     }
 
+    @Override
+    public void onBackPressed() {}
+
 }
