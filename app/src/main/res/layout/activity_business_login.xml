@@ -5,16 +5,13 @@
     android:background="@drawable/bg"
     tools:context="cse112goldteam.robobetty.BusinessLoginActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="400dip"
         android:layout_height="wrap_content"
         android:layout_above="@+id/box"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:paddingBottom="20dp"
-        android:text="RoboBetty"
-        android:textColor="#fff"
-        android:textSize="50dp" />
+        android:src="@drawable/logo_large" />
 
     <LinearLayout
         android:id="@+id/box"
@@ -55,7 +52,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/white_bg"
             android:hint=" Password"
-            android:textColor="#000"/>
+            android:textColor="#000" />
 
         <EditText
             android:id="@+id/editTextDeviceName"
@@ -66,7 +63,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/white_bg"
             android:hint=" Optional: Device name"
-            android:textColor="#000"/>
+            android:textColor="#000" />
 
         <Button
             android:id="@+id/buttonLogin"

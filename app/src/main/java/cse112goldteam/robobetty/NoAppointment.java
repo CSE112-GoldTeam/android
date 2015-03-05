@@ -2,11 +2,16 @@ package cse112goldteam.robobetty;
 
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.ImageView;
 
 public class NoAppointment extends ActionBarActivity implements View.OnClickListener{
+
+    private ImageView view;
+    private AnimationDrawable frameAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +19,26 @@ public class NoAppointment extends ActionBarActivity implements View.OnClickList
         setContentView(R.layout.activity_no_appointment);
         this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonDone2).setOnClickListener(this);
+
+        // Initialize ImageView and set animation on background
+        view = (ImageView) findViewById(R.id.imageAnimation);
+        view.setBackgroundResource(R.drawable.animation_list);
+
+        // Typecasting the Animation Drawable
+        frameAnimation = (AnimationDrawable) view.getBackground();
+    }
+
+    // Called when Activity becomes visible or invisible to the user
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            // Starting the animation when in Focus
+            frameAnimation.start();
+        } else {
+            // Stoping the animation when not in Focus
+            frameAnimation.stop();
+        }
     }
 
     @Override
