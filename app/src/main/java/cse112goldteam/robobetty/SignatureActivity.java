@@ -14,6 +14,7 @@ public class SignatureActivity extends ActionBarActivity implements View.OnClick
         setContentView(R.layout.activity_signature);
 
         findViewById(R.id.buttonDoneSignActivity).setOnClickListener(this);
+        findViewById(R.id.buttonPrev).setOnClickListener(this);
     }
 
     @Override
@@ -23,6 +24,9 @@ public class SignatureActivity extends ActionBarActivity implements View.OnClick
                 Intent gotoDoneActivity = new Intent(this, DoneActivity.class);
                 startActivity(gotoDoneActivity);
                 overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
+                break;
+            case R.id.buttonPrev:
+                this.onBackPressed();
                 break;
         }
     }
