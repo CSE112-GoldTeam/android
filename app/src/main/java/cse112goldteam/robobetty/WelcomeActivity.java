@@ -21,12 +21,8 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
         findViewById(R.id.buttonCheckIn).setOnClickListener(this);
         findViewById(R.id.buttonNoAppointment).setOnClickListener(this);
 
-        // Typecasting the Image View
+        // Initialize ImageView and set animation on background
         view = (ImageView) findViewById(R.id.imageAnimation);
-
-
-        // Setting animation_list.xml as the background of the image view
-
         view.setBackgroundResource(R.drawable.animation_list);
 
         // Typecasting the Animation Drawable
@@ -59,13 +55,13 @@ public class WelcomeActivity extends ActionBarActivity implements View.OnClickLi
             case R.id.buttonCheckIn:
                 Intent gotoFindAppointmentActivity = new Intent(this, FindAppointmentActivity.class);
                 startActivity(gotoFindAppointmentActivity);
-                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
+                overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
 
             case R.id.buttonNoAppointment:
                 Intent gotoNoAppointmentActivity = new Intent(this, NoAppointment.class);
                 startActivity(gotoNoAppointmentActivity);
-                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
+                overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
                 break;
         }
     }

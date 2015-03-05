@@ -44,7 +44,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/white_bg"
             android:hint=" Username / Email"
-            android:textColor="#fff" />
+            android:textColor="#000" />
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -54,7 +54,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/white_bg"
-            android:hint=" Password" />
+            android:hint=" Password"
+            android:textColor="#000"/>
 
         <EditText
             android:id="@+id/editTextDeviceName"
@@ -64,7 +65,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/white_bg"
-            android:hint=" Optional: Device name" />
+            android:hint=" Optional: Device name"
+            android:textColor="#000"/>
 
         <Button
             android:id="@+id/buttonLogin"
