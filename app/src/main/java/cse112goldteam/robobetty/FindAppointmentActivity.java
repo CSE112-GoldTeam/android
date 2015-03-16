@@ -20,7 +20,7 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
 
     private ImageView view;
     private AnimationDrawable frameAnimation;
-    private EditText editTextDOB;
+    private EditText editTextFirstName, editTextLastName, editTextDOB;
     private Calendar myCalendar = Calendar.getInstance();
 
     @Override
@@ -28,6 +28,9 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_appointment);
         this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
+
+        editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
+        editTextLastName = (EditText) findViewById(R.id.editTextLastName);
 
         editTextDOB = (EditText) findViewById(R.id.editTextDOB);
         editTextDOB.setOnClickListener(this);
@@ -60,10 +63,15 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonNext:
-                Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
-                startActivity(gotoFoundActivity);
-                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
-                this.finish();
+                String firstName = editTextFirstName.getText().toString();
+                String lastName = editTextLastName.getText().toString();
+                String dob = editTextDOB.getText().toString();
+
+                new FindAppointmentAsyncTask(firstName, lastName, dob, this).execute();
+//                Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
+//                startActivity(gotoFoundActivity);
+//                overridePendingTransition  (R.anim.right_slide_in, R.anim.right_slide_out);
+//                this.finish();
                 break;
             case R.id.editTextDOB:
                 new DatePickerDialog(this, this, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();

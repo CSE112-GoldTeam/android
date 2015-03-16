@@ -7,6 +7,7 @@ package cse112goldteam.robobetty;
 public class Business {
 
     public static int background = R.drawable.bg;
+    public static String API_TOKEN = "";
 
     public static void setBackground(int resource) {
         background = resource;
