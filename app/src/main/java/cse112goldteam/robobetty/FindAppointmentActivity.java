@@ -1,6 +1,7 @@
 package cse112goldteam.robobetty;
 
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -11,6 +12,11 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -22,6 +28,7 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
     private AnimationDrawable frameAnimation;
     private EditText editTextFirstName, editTextLastName, editTextDOB;
     private Calendar myCalendar = Calendar.getInstance();
+    private ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +74,9 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
                 String lastName = editTextLastName.getText().toString();
                 String dob = editTextDOB.getText().toString();
 
+                dialog = ProgressDialog.show(this, "", "Finding appointment...");
+                dialog.setCanceledOnTouchOutside(false);
+
                 new FindAppointmentAsyncTask(firstName, lastName, dob, this).execute();
 //                Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
 //                startActivity(gotoFoundActivity);
@@ -98,6 +108,36 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
         String myFormat = "mm/dd/yy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         editTextDOB.setText(sdf.format(myCalendar.getTime()));
+    }
+
+
+    public void appointmentNotFound() {
+        dialog.cancel();
+        Toast.makeText(this, "Appointment not found.", Toast.LENGTH_SHORT).show();
+    }
+
+    public void appointmentFound(JSONObject info) {
+        dialog.cancel();
+        String fname = "", lname = "", dob = "", email = "";
+        try {
+            fname = info.getString("fname");
+            lname = info.getString("lname");
+            dob = info.getString("dob");
+            email = info.getString("email");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
+        gotoFoundActivity.putExtra("FNAME", fname);
+        gotoFoundActivity.putExtra("LNAME", lname);
+        gotoFoundActivity.putExtra("DOB", dob);
+        gotoFoundActivity.putExtra("EMAIL", email);
+
+        startActivity(gotoFoundActivity);
+        overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
+        this.finish();
+
     }
 
 }
