@@ -1,0 +1,22 @@
+{
+    "Name": {
+        "type": "textfield",
+        "priority": "0"
+    },
+    "Email": {
+        "type": "textfield",
+        "priority": "1",
+	"hint":"YourEmail@xxx.com"
+    },
+    "Gender": {
+        "type": "dropdown",
+        "priority": "2",
+        "options": ["Male","Female"] 
+    },
+    "Favorite Color": {
+        "type": "dropdown",
+        "priority": "3",
+        "options": ["Blue", "Yellow", "Green", "Pink"]
+    }
+}
+

@@ -7,5 +7,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_custom_form">CustomFormActivity</string>
     <string name="title_activity_found">FoundActivity</string>
+    <string name="title_activity_active_dynamicform">active_dynamicform</string>
 
 </resources>

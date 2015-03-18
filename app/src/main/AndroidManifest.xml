@@ -29,6 +29,10 @@
             android:name=".FoundActivity"
             android:label="@string/title_activity_found" >
         </activity>
+        <activity
+            android:name=".DynamicForm"
+            android:label="@string/title_activity_active_dynamicform" >
+        </activity>
     </application>
 
 </manifest>
