@@ -3,6 +3,10 @@ package cse112goldteam.robobetty;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -32,17 +36,17 @@ public class FindAppointmentAsyncTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         try {
 
-            url += "?fname='" +firstName + "'&lname='" + lastName + "'&dob='" + dob + "'";
+            url += "?fname='" + firstName + "'&lname='" + lastName + "'&dob='" + dob + "'";
             HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
 
             c.setRequestMethod("GET");
-            String token = Business.API_TOKEN + ":";
-            c.setRequestProperty("Authorization", "Token " + Base64.encodeToString(token.getBytes(), Base64.NO_WRAP));
+            String token = Business.API_TOKEN;
+            c.setRequestProperty("Authorization", "Token " + token);
             c.setRequestProperty("Content-type", "application/json");
 
             int responseCode = c.getResponseCode();
 
-            if (responseCode ==500) {
+            if (responseCode == 200) {
                 try {
                     InputStreamReader response = new InputStreamReader(c.getInputStream(), "UTF-8");
                     BufferedReader reader = new BufferedReader(response);
@@ -71,16 +75,16 @@ public class FindAppointmentAsyncTask extends AsyncTask<Void, Void, String> {
         }
 
         if (json.equals("failed")) {
-//            activity.unsuccessfulLogin();
+            activity.appointmentNotFound();
         }
 
         Log.d("MO", "Post execute " + json);
-//        try {
-//            JSONObject json = new JSONObject(json);
-//            activity.successfulLogin(json.getString("api_token"));
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            JSONObject info = new JSONObject(json);
+            activity.appointmentFound(info);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 

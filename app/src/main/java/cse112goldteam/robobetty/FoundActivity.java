@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class FoundActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -16,6 +17,20 @@ public class FoundActivity extends ActionBarActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found_activity);
+        String fname = "", lname = "", dob = "", email = "";
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            fname = extras.getString("FNAME");
+            lname = extras.getString("LNAME");
+            dob = extras.getString("DOB");
+            email = extras.getString("EMAIL");
+        }
+
+        ((TextView) findViewById(R.id.textViewName)).setText("Hi, " + fname);
+        ((TextView) findViewById(R.id.textViewFullName)).setText(fname + " " + lname);
+        ((TextView) findViewById(R.id.textViewDOB)).setText(dob);
+        ((TextView) findViewById(R.id.textViewEmail)).setText(email);
 
         this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonNext).setOnClickListener(this);

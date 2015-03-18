@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            android:text="Thank you! You&apos;re all set, John!"
+            android:text="Thank you! You&apos;re all set, Jane!"
             android:textSize="30dp"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"

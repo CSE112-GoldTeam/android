@@ -52,6 +52,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/white_bg"
             android:hint=" Password"
+            android:inputType="textPassword"
             android:textColor="#000" />
 
         <EditText
