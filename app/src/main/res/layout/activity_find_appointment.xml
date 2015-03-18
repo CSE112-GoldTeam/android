@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Welcome to Gold team"
+            android:text="Welcome to Gold Team"
             android:textColor="#fff"
             android:textSize="40dp" />
 
