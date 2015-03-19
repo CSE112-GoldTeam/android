@@ -35,6 +35,7 @@ public class FoundActivity extends ActionBarActivity implements View.OnClickList
         this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonNext).setOnClickListener(this);
         findViewById(R.id.buttonNotYou).setOnClickListener(this);
+        findViewById(R.id.buttonStartOverOnFoundAppt).setOnClickListener(this);
 
         // Initialize ImageView and set animation on background
         view = (ImageView) findViewById(R.id.imageAnimation);
@@ -70,7 +71,11 @@ public class FoundActivity extends ActionBarActivity implements View.OnClickList
             case R.id.buttonNotYou:
                 this.onBackPressed();
                 break;
-
+            case R.id.buttonStartOverOnFoundAppt:
+                Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
+                startActivity(gotoWelcomeActivity);
+                this.finish();
+                break;
         }
     }
 

@@ -125,4 +125,23 @@
         android:layout_above="@+id/progressBar3"
         android:layout_centerHorizontal="true" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            style="@style/button_custom"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Start Over"
+            android:id="@+id/buttonStartOverOnCustomForm"
+            android:layout_gravity="bottom"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
 </RelativeLayout>

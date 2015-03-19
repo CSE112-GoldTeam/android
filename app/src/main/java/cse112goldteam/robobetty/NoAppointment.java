@@ -19,6 +19,7 @@ public class NoAppointment extends ActionBarActivity implements View.OnClickList
         setContentView(R.layout.activity_no_appointment);
         this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonDone2).setOnClickListener(this);
+        findViewById(R.id.buttonStartOverOnNoAppt).setOnClickListener(this);
 
         // Initialize ImageView and set animation on background
         view = (ImageView) findViewById(R.id.imageAnimation);
@@ -44,6 +45,11 @@ public class NoAppointment extends ActionBarActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.buttonDone2) {
+            Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
+            startActivity(gotoWelcomeActivity);
+            this.finish();
+        }
+        else if (v.getId() == R.id.buttonStartOverOnNoAppt) {
             Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
             startActivity(gotoWelcomeActivity);
             this.finish();

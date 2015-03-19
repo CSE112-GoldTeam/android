@@ -21,6 +21,7 @@ public class SignatureActivity extends ActionBarActivity implements View.OnClick
         this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonDoneSignActivity).setOnClickListener(this);
         findViewById(R.id.buttonPrev).setOnClickListener(this);
+        findViewById(R.id.buttonStartOverOnSignature).setOnClickListener(this);
         // Initialize ImageView and set animation on background
         view = (ImageView) findViewById(R.id.imageAnimation);
         view.setBackgroundResource(R.drawable.animation_list);
@@ -52,6 +53,11 @@ public class SignatureActivity extends ActionBarActivity implements View.OnClick
                 break;
             case R.id.buttonPrev:
                 this.onBackPressed();
+                break;
+            case R.id.buttonStartOverOnSignature:
+                Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
+                startActivity(gotoWelcomeActivity);
+                this.finish();
                 break;
         }
     }

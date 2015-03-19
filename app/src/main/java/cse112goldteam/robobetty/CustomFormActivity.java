@@ -26,6 +26,7 @@ public class CustomFormActivity extends ActionBarActivity implements View.OnClic
 
         findViewById(R.id.buttonNextCustomForm).setOnClickListener(this);
         findViewById(R.id.buttonCancelCustomForm).setOnClickListener(this);
+        findViewById(R.id.buttonStartOverOnCustomForm).setOnClickListener(this);
         editTextAllergies = (EditText) findViewById(R.id.editTextAllergies);
         editTextFavoriteColor = (EditText) findViewById(R.id.editTextFavoriteColor);
 
@@ -64,6 +65,11 @@ public class CustomFormActivity extends ActionBarActivity implements View.OnClic
         }
         else if(v.getId() == R.id.buttonCancelCustomForm) {
             this.onBackPressed();
+        }
+        else if (v.getId() == R.id.buttonStartOverOnCustomForm) {
+            Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
+            startActivity(gotoWelcomeActivity);
+            this.finish();
         }
 
     }

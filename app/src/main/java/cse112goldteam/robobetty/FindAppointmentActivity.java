@@ -43,6 +43,7 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
         editTextDOB.setOnClickListener(this);
         findViewById(R.id.buttonNext).setOnClickListener(this);
         findViewById(R.id.buttonCancel).setOnClickListener(this);
+        findViewById(R.id.buttonStartOverOnFindAppt).setOnClickListener(this);
 
         // Initialize ImageView and set animation on background
         view = (ImageView) findViewById(R.id.imageAnimation);
@@ -88,6 +89,11 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
                 break;
             case R.id.buttonCancel:
                 this.onBackPressed();
+                break;
+            case R.id.buttonStartOverOnFindAppt:
+                Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
+                startActivity(gotoWelcomeActivity);
+                this.finish();
                 break;
         }
     }

@@ -18,6 +18,7 @@ public class DoneActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_done);
         this.findViewById(android.R.id.content).setBackgroundResource(Business.background);
         findViewById(R.id.buttonDone).setOnClickListener(this);
+        findViewById(R.id.buttonStartOverOnDone).setOnClickListener(this);
 
         // Initialize ImageView and set animation on background
         view = (ImageView) findViewById(R.id.imageAnimation);
@@ -43,6 +44,11 @@ public class DoneActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.buttonDone) {
+            Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
+            startActivity(gotoWelcomeActivity);
+            this.finish();
+        }
+        else if (v.getId() == R.id.buttonStartOverOnDone) {
             Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
             startActivity(gotoWelcomeActivity);
             this.finish();
