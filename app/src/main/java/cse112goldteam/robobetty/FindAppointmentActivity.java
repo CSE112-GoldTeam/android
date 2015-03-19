@@ -128,6 +128,8 @@ public class FindAppointmentActivity extends ActionBarActivity implements View.O
             e.printStackTrace();
         }
 
+        Business.PATIENT_NAME = fname;
+
         Intent gotoFoundActivity = new Intent(this, FoundActivity.class);
         gotoFoundActivity.putExtra("FNAME", fname);
         gotoFoundActivity.putExtra("LNAME", lname);

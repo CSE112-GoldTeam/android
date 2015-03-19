@@ -60,6 +60,7 @@ public class BusinessLoginActivity extends ActionBarActivity implements View.OnC
         Toast.makeText(this, "Successful Login", Toast.LENGTH_SHORT).show();
         Log.d("MO", token);
         Business.API_TOKEN = token;
+        Business.PATIENT_NAME = "";
 
         Intent gotoWelcomeActivity = new Intent(this, WelcomeActivity.class);
         startActivity(gotoWelcomeActivity);
